@@ -1,0 +1,8 @@
+{
+  "name": "Ayman Nuts & Dry Fruits",
+  "description": "Premium nuts, dry fruits, dates, and gift hampers. Luxury shopping experience for high-quality natural snacks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
