@@ -8,11 +8,14 @@ export default function Hero() {
       <div className="absolute inset-0">
         {/* Static high quality image */}
         <div className="absolute inset-0">
-          <img 
-            src="/Product Images/Product Images/dryfruits/dryfruits_2.jpg" 
-            alt="Premium Dry Fruits Collection" 
-            className="w-full h-full object-cover"
-          />
+          <picture className="w-full h-full">
+            <source media="(max-width: 768px)" srcSet="/mob_banner.webp" />
+            <img 
+              src="/Product Images/Product Images/dryfruits/dryfruits_2.jpg" 
+              alt="Premium Dry Fruits Collection" 
+              className="w-full h-full object-cover"
+            />
+          </picture>
         </div>
         
         {/* Overlay */}
