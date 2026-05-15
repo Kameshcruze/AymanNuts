@@ -51,22 +51,6 @@ export default function ProductDetailsPage() {
     navigate('/checkout'); // Direct to checkout
   };
 
-  const handleNextImage = () => {
-    if (product.images.length > 1) {
-      setSwipeDirection(1);
-      setSelectedImage((prev) => (prev + 1) % product.images.length);
-    }
-  };
-
-  const handlePrevImage = () => {
-    if (product.images.length > 1) {
-      setSwipeDirection(-1);
-      setSelectedImage((prev) => (prev - 1 + product.images.length) % product.images.length);
-    }
-  };
-
-  const [swipeDirection, setSwipeDirection] = useState(0);
-
   const relatedProducts = products
     .filter(p => p.category === product.category && p.id !== product.id)
     .slice(0, 4);
@@ -77,71 +61,22 @@ export default function ProductDetailsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
           {/* Left: Image Gallery */}
           <div className="space-y-6">
-            <div className="relative aspect-square rounded-3xl overflow-hidden bg-white/5 border border-white/10 group shadow-2xl shadow-black/50 touch-pan-y">
-              <AnimatePresence initial={false} custom={swipeDirection} mode="popLayout">
-                <motion.img 
-                  key={selectedImage}
-                  custom={swipeDirection}
-                  variants={{
-                    enter: (direction: number) => ({
-                      x: direction > 0 ? '100%' : direction < 0 ? '-100%' : 0,
-                      opacity: 0
-                    }),
-                    center: {
-                      zIndex: 1,
-                      x: 0,
-                      opacity: 1
-                    },
-                    exit: (direction: number) => ({
-                      zIndex: 0,
-                      x: direction < 0 ? '100%' : direction > 0 ? '-100%' : 0,
-                      opacity: 0
-                    })
-                  }}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{
-                    x: { type: "spring", stiffness: 300, damping: 30 },
-                    opacity: { duration: 0.2 }
-                  }}
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={0.2}
-                  onDragStart={() => setSwipeDirection(0)}
-                  onDragEnd={(_e, { offset }) => {
-                    const swipe = offset.x;
-                    if (swipe < -50) {
-                      setSwipeDirection(1);
-                      handleNextImage();
-                    } else if (swipe > 50) {
-                      setSwipeDirection(-1);
-                      handlePrevImage();
-                    }
-                  }}
-                  src={product.images[selectedImage]} 
-                  alt={product.name}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </AnimatePresence>
-              
+            <div className="relative aspect-square rounded-3xl overflow-hidden bg-white/5 border border-white/10 group shadow-2xl shadow-black/50">
+              <motion.img 
+                key={selectedImage}
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                src={product.images[selectedImage]} 
+                alt={product.name}
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
               <button 
                 onClick={() => setIsFullscreen(true)}
-                className="absolute top-6 right-6 z-20 p-3 bg-black/60 rounded-full text-white/80 hover:text-gold-500 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all"
+                className="absolute top-6 right-6 p-3 bg-black/60 rounded-full text-white/80 hover:text-gold-500 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all"
               >
                 <Maximize2 className="w-5 h-5" />
               </button>
-
-              {/* Dots indicator for mobile */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20 md:hidden">
-                {product.images.map((_, idx) => (
-                  <div 
-                    key={idx}
-                    className={`w-1.5 h-1.5 rounded-full transition-all ${selectedImage === idx ? 'bg-gold-500 w-4' : 'bg-white/30'}`}
-                  />
-                ))}
-              </div>
             </div>
             
             <div className="grid grid-cols-5 gap-4">
