@@ -344,7 +344,7 @@ export default function ProductDetailsPage() {
               <span className="text-gold-500 text-[10px] uppercase font-black tracking-[0.4em] mb-4 block">You may also like</span>
               <h2 className="text-4xl font-serif font-bold text-white">Related Collections</h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
               {relatedProducts.map(p => (
                 <ProductCard key={p.id} product={p} />
               ))}

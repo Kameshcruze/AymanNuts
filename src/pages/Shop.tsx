@@ -94,20 +94,20 @@ export default function Shop() {
 
       <div className="container mx-auto px-4 md:px-8">
         {!selectedCategory && (
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 pt-8 pb-12 border-b border-white/5 mb-12">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-8 pt-4 md:pt-8 pb-6 md:pb-12 border-b border-white/5 mb-6 md:mb-12">
             <div>
-              <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4 tracking-wide text-white">The Collection</h1>
-              <p className="text-white/40 text-sm">Showing {filteredProducts.length} premium products</p>
+              <h1 className="text-2xl md:text-5xl font-serif font-bold mb-2 md:mb-4 tracking-wide text-white">The Collection</h1>
+              <p className="text-white/40 text-xs md:text-sm">Showing {filteredProducts.length} premium products</p>
             </div>
             
             <div className="relative group max-w-md w-full">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gold-500/50 group-focus-within:text-gold-500 transition-colors" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 text-gold-500/50 group-focus-within:text-gold-500 transition-colors" />
               <input 
                 type="text"
                 placeholder="Search our selection..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full bg-white/5 border border-white/10 rounded-full py-4 pl-12 pr-6 text-sm focus:outline-none focus:border-gold-500/50 transition-all placeholder:text-white/20 text-white"
+                className="w-full bg-white/5 border border-white/10 rounded-full py-2.5 md:py-4 pl-10 md:pl-12 pr-6 text-xs md:text-sm focus:outline-none focus:border-gold-500/50 transition-all placeholder:text-white/20 text-white"
               />
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function Shop() {
 
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Sidebar */}
-          <aside className="hidden lg:block w-64 shrink-0 space-y-12">
+          <aside className="hidden lg:block w-64 shrink-0 space-y-12 sticky top-28 h-fit max-h-[calc(100vh-140px)] overflow-y-auto custom-scrollbar pr-4">
             <div>
               <h3 className="font-serif text-lg font-bold mb-6 tracking-wide text-gold-200 uppercase text-[10px]">Categories</h3>
               <div className="flex flex-col gap-4">
@@ -155,7 +155,7 @@ export default function Shop() {
 
           {/* Main Grid */}
           <div className="flex-1">
-            <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center justify-between mb-4 md:mb-8">
               <button 
                 onClick={() => setIsFilterOpen(true)}
                 className="lg:hidden flex items-center gap-2 text-gold-500 font-bold text-xs uppercase tracking-widest"
@@ -180,7 +180,7 @@ export default function Shop() {
             </div>
 
             {filteredProducts.length > 0 ? (
-              <div className={`grid gap-8 ${viewMode === 'grid' ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
+              <div className={`grid gap-3 md:gap-8 ${viewMode === 'grid' ? 'grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
                 <AnimatePresence mode="popLayout">
                   {filteredProducts.map((product) => (
                     <motion.div
@@ -234,7 +234,7 @@ export default function Shop() {
                  </button>
               </div>
 
-              <div className="flex-1 overflow-y-auto space-y-12">
+              <div className="flex-1 overflow-y-auto custom-scrollbar pr-4 space-y-12">
                 <div>
                   <h3 className="font-serif text-lg font-bold mb-6 text-gold-200 uppercase text-[10px] tracking-widest">Categories</h3>
                   <div className="flex flex-col gap-6">

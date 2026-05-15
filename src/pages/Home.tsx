@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'motion/react';
 import { Truck, ShieldCheck, Zap, Star, Award, Instagram } from 'lucide-react';
 import Hero from '../components/Hero';
@@ -27,21 +28,29 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold-500/5 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2" />
 
         <div className="container mx-auto px-4 md:px-8 relative z-10">
-          <div className="flex flex-col items-center text-center mb-16">
-            <motion.span 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="text-gold-500 font-bold tracking-[0.4em] uppercase text-xs mb-4"
+          <div className="flex flex-col md:flex-row items-center md:items-end justify-between gap-8 mb-16 text-center md:text-left">
+            <div className="flex flex-col items-center md:items-start max-w-2xl">
+              <motion.span 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="text-gold-500 font-bold tracking-[0.4em] uppercase text-xs mb-4"
+              >
+                Curated Selection
+              </motion.span>
+              <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Our Best Sellers</h2>
+              <p className="text-white/40 font-light leading-relaxed">
+                Discover the products that our customers love the most. Hand-picked for quality and taste.
+              </p>
+            </div>
+            <Link 
+              to="/shop" 
+              className="text-gold-500 font-bold uppercase tracking-widest text-xs border-b border-gold-500/20 pb-2 hover:text-gold-300 hover:border-gold-300 transition-all duration-300 flex items-center gap-2"
             >
-              Curated Selection
-            </motion.span>
-            <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Our Best Sellers</h2>
-            <p className="text-white/40 max-w-lg font-light leading-relaxed">
-              Discover the products that our customers love the most. Hand-picked for quality and taste.
-            </p>
+              View All Products
+            </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -52,7 +61,7 @@ export default function Home() {
       <CategoriesSection />
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-white/5 border-y border-white/5">
+      <section className="py-24 bg-white/5 border-y border-white/5 overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {[
@@ -112,18 +121,21 @@ export default function Home() {
       </section>
 
       {/* New Arrivals */}
-      <section className="py-24 bg-black">
+      <section className="py-24 bg-black overflow-hidden text-left">
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex items-center justify-between gap-6 mb-16">
             <div className="space-y-4">
               <span className="text-gold-500 font-bold tracking-[0.3em] uppercase text-xs">Recently Added</span>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-white tracking-wide">New Arrivals</h2>
             </div>
-            <button className="hidden sm:block text-gold-500 font-bold uppercase tracking-widest text-xs border-b border-gold-500/20 pb-1 hover:text-gold-300 transition-colors">
+            <Link 
+              to="/shop" 
+              className="hidden sm:block text-gold-500 font-bold uppercase tracking-widest text-xs border-b border-gold-500/20 pb-1 hover:text-gold-300 transition-colors"
+            >
               View All Arrivals
-            </button>
+            </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
             {newArrivals.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -139,7 +151,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-white tracking-wide">What Our Customers Say</h2>
            </div>
 
-           <div className="flex flex-nowrap gap-8 overflow-x-auto pb-12 snap-x scrollbar-hide no-scrollbar">
+           <div className="flex flex-nowrap gap-8 overflow-x-auto pb-12 snap-x custom-scrollbar-horizontal">
               {[1, 2, 3, 4, 5].map((i) => (
                 <motion.div 
                   key={i}
@@ -168,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* Instagram Feed Section */}
-      <section className="py-24 bg-black border-t border-white/5 text-center">
+      <section className="py-24 bg-black border-t border-white/5 text-center overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
             <h2 className="text-3xl font-serif font-bold mb-8">Follow us on Instagram</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">

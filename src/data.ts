@@ -4,43 +4,43 @@ export const categories: Category[] = [
   {
     id: 'dry-fruits',
     name: 'Dry Fruits',
-    image: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?auto=format&fit=crop&w=800&q=80',
+    image: '/Product Images/Product Images/dryfruits/dryfruits_1.avif',
     description: 'Premium selection of sun-dried fruits.'
   },
   {
     id: 'nuts',
     name: 'Nuts',
-    image: 'https://images.unsplash.com/photo-1596502591512-9c3fdf92c90c?auto=format&fit=crop&w=800&q=80',
+    image: '/Product Images/Product Images/nuts/nuts_1.jpg',
     description: 'Crunchy, healthy, and high-quality nuts.'
   },
   {
     id: 'dates',
     name: 'Dates',
-    image: 'https://images.unsplash.com/photo-1611082531065-276ad4860ced?auto=format&fit=crop&w=800&q=80',
+    image: '/Product Images/Product Images/dates/dates_1.avif',
     description: 'Exotic dates from around the world.'
   },
   {
     id: 'seeds',
     name: 'Seeds',
-    image: 'https://images.unsplash.com/photo-1600189020840-e9918c25269d?auto=format&fit=crop&w=800&q=80',
+    image: '/Product Images/Product Images/seeds/seeds_1.jpg',
     description: 'Nutrient-rich seeds for a healthy life.'
   },
   {
     id: 'chocolates',
     name: 'Imported Chocolates',
-    image: 'https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=800&q=80',
+    image: '/Product Images/Product Images/importedchocolates/impotredchocolate_1.jpg',
     description: 'Luxury chocolates from premium global brands.'
   },
   {
     id: 'perfumes',
     name: 'Perfumes',
-    image: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80',
+    image: '/Product Images/Product Images/perfumes/perfume_1.webp',
     description: 'Elegant fragrances for Every occasion.'
   },
   {
     id: 'gift-hampers',
     name: 'Gift Hampers',
-    image: 'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80',
+    image: '/Product Images/Product Images/gifthamper/gifthamper_1.jpg',
     description: 'Thoughtfully curated luxury gift boxes.'
   },
   {
@@ -62,9 +62,8 @@ export const products: Product[] = [
     shortDescription: 'Premium quality crunchy California almonds.',
     description: 'Sourced from the finest orchards in California, our almonds are hand-picked for their size, crunch, and flavor. These premium almonds are rich in Vitamin E, antioxidants, and healthy fats, making them the perfect heart-healthy snack.',
     images: [
-      'https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1574868991631-50774614e137?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1615485501811-30d8d752c082?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/californiaalmonds/californiaAlmond_1.webp',
+      '/Product Images/Product Images/californiaalmonds/californiaalmonds_2.avif'
     ],
     rating: 4.9,
     reviewsCount: 156,
@@ -87,9 +86,8 @@ export const products: Product[] = [
     shortDescription: 'Fresh whole premium cashews.',
     description: 'Our W320 grade cashews are known for their large size and creamy white color. They are perfectly roasted to retain their natural sweetness and buttery texture. Ideal for snacking or gourmet cooking.',
     images: [
-      '/Cashew/cashew320.jpg',
-      '/Cashew/cashew320_1.jpg',
-      '/Cashew/cashew320_2.jpg'
+      '/Product Images/Product Images/casheww320/casheww320_1.jpg',
+      '/Product Images/Product Images/casheww320/casheww320_2.avif'
     ],
     rating: 4.8,
     reviewsCount: 92,
@@ -106,9 +104,8 @@ export const products: Product[] = [
     shortDescription: 'Naturally sweet golden raisins.',
     description: 'Grown in the sunny valleys of Afghanistan, these golden raisins are naturally sun-dried to lock in their sweetness. They are jumbo-sized, seedless, and perfect for baking or a quick energy boost.',
     images: [
-      'https://images.unsplash.com/photo-1599584384813-f421f1c24368?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1592394533824-9440e5d68530?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/alghanraisins/alghanraisins_1.jpeg',
+      '/Product Images/Product Images/alghanraisins/alghanraisins_2.jpg'
     ],
     rating: 4.7,
     reviewsCount: 64,
@@ -124,9 +121,8 @@ export const products: Product[] = [
     shortDescription: 'Naturally dried premium figs.',
     description: 'Our premium dried figs (Anjeer) are soft, sweet, and incredibly nutritious. They are high in fiber, calcium, and iron. Perfectly chewy and naturally sourced from the best farms.',
     images: [
-      'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1596502591512-9c3fdf92c90c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/driedfigs/driedfigs_1.webp',
+      '/Product Images/Product Images/driedfigs/driedfig_2.jpg'
     ],
     rating: 4.8,
     reviewsCount: 112,
@@ -142,9 +138,8 @@ export const products: Product[] = [
     shortDescription: 'Imported soft Turkish apricots.',
     description: 'Imported from the sun-drenched orchards of Malatya, Turkey, these apricots are exceptionally soft and juicy. They have a rich orange color and a perfect balance of sweetness and tang.',
     images: [
-      'https://images.unsplash.com/photo-1510212330251-512530f9cc9c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1510212005934-2e994917641f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1510212040436-1e66c9ff99a9?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/turkishapricot/turkishApricot_1.webp',
+      '/Product Images/Product Images/turkishapricot/turkishapricot_2.jpg'
     ],
     rating: 4.6,
     reviewsCount: 48,
@@ -162,9 +157,8 @@ export const products: Product[] = [
     shortDescription: 'Premium Iranian pistachios, roasted and salted.',
     description: 'Known as the "smiling nut," our pistachios are sourced from the best Iranian orchards. They are perfectly roasted and lightly seasoned with sea salt to enhance their natural creamy flavor.',
     images: [
-      'https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1567333528661-d088a52865af?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1543363136-3fdb62e11be5?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/saltedpista/saltedpistachios_1.jpg',
+      '/Product Images/Product Images/saltedpista/saltedpistachios_2.jpeg'
     ],
     rating: 4.9,
     reviewsCount: 204,
@@ -182,9 +176,8 @@ export const products: Product[] = [
     shortDescription: 'Extra-light Chilean walnut kernels.',
     description: 'Our Chilean walnut kernels are prized for their extra-light color and lack of bitterness. They are rich in Omega-3 fatty acids and antioxidants, perfect for heart and brain health.',
     images: [
-      'https://images.unsplash.com/photo-1582236521564-9a4f61f71dfc?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1585250498117-64ec28236ec1?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1606923829579-0ae9f472af43?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/nuts/nuts_1.jpg',
+      '/Product Images/Product Images/nuts/nuts_2.jpg'
     ],
     rating: 4.8,
     reviewsCount: 135,
@@ -200,9 +193,8 @@ export const products: Product[] = [
     shortDescription: 'The buttery treasure of all nuts.',
     description: 'Imported from Australia, these Macadamias are the ultimate luxury nut. Their incredibly creamy, buttery texture and subtle sweetness make them an elite snack.',
     images: [
-      'https://images.unsplash.com/photo-1510212005934-2e994917641f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1600189020840-e9918c25269d?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1596502591512-9c3fdf92c90c?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/nuts/nuts_1.jpg',
+      '/Product Images/Product Images/nuts/nuts_2.jpg'
     ],
     rating: 5.0,
     reviewsCount: 28,
@@ -219,9 +211,8 @@ export const products: Product[] = [
     shortDescription: 'Ultimate blend of premium almonds, cashews, and pistachios.',
     description: 'The perfect trail mix for the health-conscious. A balanced blend of our finest roasted almonds, buttery cashews, and crunchy pistachios.',
     images: [
-      'https://images.unsplash.com/photo-1558235251-54070a2e5883?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1623307567702-8610fe719463?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1592394533824-9440e5d68530?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/nuts/nuts_1.jpg',
+      '/Product Images/Product Images/nuts/nuts_2.jpg'
     ],
     rating: 4.7,
     reviewsCount: 189,
@@ -237,9 +228,8 @@ export const products: Product[] = [
     shortDescription: 'Jumbo size roasted peanuts.',
     description: 'Sourced from Bharuch, known for the world\'s best peanuts. These are dry roasted in sand to maintain that authentic salt-baked flavor without the mess.',
     images: [
-      'https://images.unsplash.com/photo-1563223030-cf2c595f5195?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1534067783941-51c9c23ecd73?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1567333528661-d088a52865af?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/nuts/nuts_1.jpg',
+      '/Product Images/Product Images/nuts/nuts_2.jpg'
     ],
     rating: 4.5,
     reviewsCount: 312,
@@ -257,9 +247,8 @@ export const products: Product[] = [
     shortDescription: 'The holy dates from Medina.',
     description: 'Black, round, and slightly shrivelled, Ajwa dates from Medina are the most sought-after variety. They have a fine texture and a unique flavor profile that is neither too sweet nor too dry.',
     images: [
-      'https://images.unsplash.com/photo-1611082531065-276ad4860ced?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1560023608-16447822ce00?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/ajwadates/ajwadates_1.webp',
+      '/Product Images/Product Images/ajwadates/Ajwadates_2.webp'
     ],
     rating: 5.0,
     reviewsCount: 142,
@@ -277,9 +266,8 @@ export const products: Product[] = [
     shortDescription: 'Meaty, sweet, and exceptionally large.',
     description: 'Known as the "King of Dates", our Medjool dates are exceptionally large and sweet. They have a soft, sticky texture and a rich caramel-like flavor.',
     images: [
-      'https://images.unsplash.com/photo-1590005354167-6da97870c91d?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1566371486490-560ded239dae?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/dates/dates_1.avif',
+      '/Product Images/Product Images/dates/dates_2.jpg'
     ],
     rating: 4.9,
     reviewsCount: 98,
@@ -295,9 +283,8 @@ export const products: Product[] = [
     shortDescription: 'Authentic Iranian soft black dates.',
     description: 'Directly imported from Bam, Iran. Kimia dates are known for their moist, soft texture and dark black skin. They literally melt in your mouth.',
     images: [
-      'https://images.unsplash.com/photo-1590004953392-5aba2e78ee9f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1590005354167-6da97870c91d?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/dates/dates_1.avif',
+      '/Product Images/Product Images/dates/dates_2.jpg'
     ],
     rating: 4.8,
     reviewsCount: 215,
@@ -313,9 +300,8 @@ export const products: Product[] = [
     shortDescription: 'Assorted collection of various Arabian dates.',
     description: 'A perfect sampler including Safawi, Kalmi, and Mabroom dates. Each offering a unique texture and sweetness level.',
     images: [
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1611082531065-276ad4860ced?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1560023608-16447822ce00?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/dates/dates_1.avif',
+      '/Product Images/Product Images/dates/dates_2.jpg'
     ],
     rating: 4.7,
     reviewsCount: 76,
@@ -331,9 +317,8 @@ export const products: Product[] = [
     shortDescription: 'Fine-quality semi-dried Saudi dates.',
     description: 'Grown in Al-Madina, Safawi dates are medium-sized, long, and black. They are known for their deep color and intense sweetness with a slightly chewy texture.',
     images: [
-      'https://images.unsplash.com/photo-1611082531065-276ad4860ced?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1543362906-acfc16c623a2?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/dates/dates_1.avif',
+      '/Product Images/Product Images/dates/dates_2.jpg'
     ],
     rating: 4.8,
     reviewsCount: 54,
@@ -351,9 +336,8 @@ export const products: Product[] = [
     shortDescription: 'The ultimate superfood for smoothies.',
     description: 'Organic raw chia seeds packed with Omega-3s and fiber. These are the perfect addition to your breakfast bowls, puddings, or morning water.',
     images: [
-      'https://images.unsplash.com/photo-1626084300762-53d147eaa977?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1596502591512-9c3fdf92c90c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1596502591512-9c3fdf92c90c?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/seeds/seeds_1.jpg',
+      '/Product Images/Product Images/seeds/seeds_2.jpg'
     ],
     rating: 4.8,
     reviewsCount: 320,
@@ -369,9 +353,8 @@ export const products: Product[] = [
     shortDescription: 'Crunchy raw pumpkin seeds rich in zinc.',
     description: 'Naturally sourced and lightly sun-dried. Pumpkin seeds are a nutrition powerhouse, rich in zinc and magnesium for improved immunity.',
     images: [
-      'https://images.unsplash.com/photo-1563492065846-953eacc26402?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1596502591512-9c3fdf92c90c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1567333528661-d088a52865af?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/seeds/seeds_1.jpg',
+      '/Product Images/Product Images/seeds/seeds_2.jpg'
     ],
     rating: 4.7,
     reviewsCount: 145,
@@ -387,9 +370,8 @@ export const products: Product[] = [
     shortDescription: 'Raw hulled sunflower seeds.',
     description: 'These high-quality seeds are perfect for snacking or as a salad topper. Rich in Vitamin E and antioxidants.',
     images: [
-      'https://images.unsplash.com/photo-1615485501811-30d8d752c082?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1547496613-2e22c076579b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/seeds/seeds_1.jpg',
+      '/Product Images/Product Images/seeds/seeds_2.jpg'
     ],
     rating: 4.6,
     reviewsCount: 89,
@@ -405,9 +387,8 @@ export const products: Product[] = [
     shortDescription: 'Golden flax seeds for optimal digestion.',
     description: 'Our flax seeds are triple-cleaned and sourced from organic farms. High in lignans and Alpha-Linolenic Acid (ALA).',
     images: [
-      'https://images.unsplash.com/photo-1626084300762-53d147eaa977?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1596502591512-9c3fdf92c90c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1563492065846-953eacc26402?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/seeds/seeds_1.jpg',
+      '/Product Images/Product Images/seeds/seeds_2.jpg'
     ],
     rating: 4.7,
     reviewsCount: 265,
@@ -423,9 +404,8 @@ export const products: Product[] = [
     shortDescription: 'Ultimate seed mix with sunflower, pumpkin, and flax.',
     description: 'A nutritional powerhouse. Our mixed seeds combine the benefits of flax, pumpkin, and sunflower seeds in one convenient pack.',
     images: [
-      'https://images.unsplash.com/photo-1510212330251-512530f9cc9c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1626084300762-53d147eaa977?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1592394533824-9440e5d68530?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/mixedhealthyseeds/mixedhealthyseeds_1.jpg',
+      '/Product Images/Product Images/mixedhealthyseeds/mixedhealthyseeds_2.avif'
     ],
     rating: 4.9,
     reviewsCount: 412,
@@ -445,9 +425,8 @@ export const products: Product[] = [
     shortDescription: 'The classic golden pleasure.',
     description: 'Whole hazelnut surrounded by delicious layers of crispy wafer, a creamy filling, smooth milk chocolate and finely chopped hazelnut pieces.',
     images: [
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1548907040-4baa42d10919?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/importedchocolates/impotredchocolate_1.jpg',
+      '/Product Images/Product Images/importedchocolates/importedchocolate_2.jpg'
     ],
     rating: 5.0,
     reviewsCount: 560,
@@ -464,9 +443,8 @@ export const products: Product[] = [
     shortDescription: 'Iconically triangular Swiss chocolate.',
     description: 'Swiss milk chocolate with honey and almond nougat. The unique triangular shape of Toblerone is instantly recognizable worldwide.',
     images: [
-      'https://images.unsplash.com/photo-1481391319762-47dff72954d9?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/importedchocolates/impotredchocolate_1.jpg',
+      '/Product Images/Product Images/importedchocolates/importedchocolate_2.jpg'
     ],
     rating: 4.8,
     reviewsCount: 342,
@@ -481,9 +459,8 @@ export const products: Product[] = [
     shortDescription: 'Silky smooth 70% cocoa Swiss chocolate.',
     description: 'Mastered by the Lindt Master Chocolatiers since 1845. A refined dark chocolate with deep cocoa notes and a surprisingly smooth finish.',
     images: [
-      'https://images.unsplash.com/photo-1481391244619-610cc2ea428e?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1511381939415-e44015466834?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1549007994-cb92cfd3dc4b?q=80&w=1000&auto=format&fit=crop'
+      '/Product Images/Product Images/importedchocolates/impotredchocolate_1.jpg',
+      '/Product Images/Product Images/importedchocolates/importedchocolate_2.jpg'
     ],
     rating: 4.9,
     reviewsCount: 890,
@@ -499,9 +476,8 @@ export const products: Product[] = [
     shortDescription: 'The great American chocolate bar.',
     description: 'A delightful selection of Hershey\'s most iconic treats including Cookies \'n\' Crème and Special Dark.',
     images: [
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1511381939415-e44015466834?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1481391319762-47dff72954d9?q=80&w=1000&auto=format&fit=crop'
+      '/Product Images/Product Images/importedchocolates/impotredchocolate_1.jpg',
+      '/Product Images/Product Images/importedchocolates/importedchocolate_2.jpg'
     ],
     rating: 4.7,
     reviewsCount: 228,
@@ -516,9 +492,8 @@ export const products: Product[] = [
     shortDescription: 'Premium UK imported Cadbury selection.',
     description: 'An assortment of the UK\'s finest Dairy Milk chocolates. Experience the richer, creamier texture and authentic British taste.',
     images: [
-      'https://images.unsplash.com/photo-1511381939415-e44015466834?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=1000&auto=format&fit=crop'
+      '/Product Images/Product Images/importedchocolates/impotredchocolate_1.jpg',
+      '/Product Images/Product Images/importedchocolates/importedchocolate_2.jpg'
     ],
     rating: 4.8,
     reviewsCount: 412,
@@ -535,9 +510,8 @@ export const products: Product[] = [
     shortDescription: 'Deep, woody, and mystical agarwood.',
     description: 'A majestic fragrance featuring premium Cambodian Oud. Long-lasting scent that project elegance and power with every spray.',
     images: [
-      'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1583467875263-d50dec37a88c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/perfumes/perfume_1.webp',
+      '/Product Images/Product Images/perfumes/perfume_2.jpg'
     ],
     rating: 5.0,
     reviewsCount: 88,
@@ -554,9 +528,8 @@ export const products: Product[] = [
     shortDescription: 'Pure white musk with floral notes.',
     description: 'A clean, powdery scent that lasts for 24 hours. The quintessential Arabian fragrance that is perfect for any occasion.',
     images: [
-      'https://images.unsplash.com/photo-1583467875263-d50dec37a88c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/perfumes/perfume_1.webp',
+      '/Product Images/Product Images/perfumes/perfume_2.jpg'
     ],
     rating: 4.8,
     reviewsCount: 156,
@@ -571,9 +544,8 @@ export const products: Product[] = [
     shortDescription: 'A bouquet of Taif roses and jasmine.',
     description: 'Experience the freshness of an early morning garden. This light yet captivating floral scent is perfect for daytime wear.',
     images: [
-      'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1583467875263-d50dec37a88c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/perfumes/perfume_1.webp',
+      '/Product Images/Product Images/perfumes/perfume_2.jpg'
     ],
     rating: 4.7,
     reviewsCount: 64,
@@ -588,9 +560,8 @@ export const products: Product[] = [
     shortDescription: 'A blend of saffron, amber, and spice.',
     description: 'Our most intense fragrance yet. Royal Gold is a status symbol in a bottle, designed for those who command attention.',
     images: [
-      'https://images.unsplash.com/photo-1583467875263-d50dec37a88c?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1000&auto=format&fit=crop'
+      '/Product Images/Product Images/perfumes/perfume_1.webp',
+      '/Product Images/Product Images/perfumes/perfume_2.jpg'
     ],
     rating: 4.9,
     reviewsCount: 42,
@@ -606,9 +577,8 @@ export const products: Product[] = [
     shortDescription: 'Bold leather and smoky notes.',
     description: 'A sophisticated evening fragrance. Midnight Black combines dark woodsy notes with a hint of vanilla for a mysterious finish.',
     images: [
-      'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1583467875263-d50dec37a88c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/perfumes/perfume_1.webp',
+      '/Product Images/Product Images/perfumes/perfume_2.jpg'
     ],
     rating: 4.8,
     reviewsCount: 77,
@@ -625,9 +595,8 @@ export const products: Product[] = [
     shortDescription: 'The health conscious gift box.',
     description: 'An elegant selection of California Almonds, Jumbo Cashews, and Afghan Raisins in a designer handcrafted box.',
     images: [
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/gifthamper/gifthamper_1.jpg',
+      '/Product Images/Product Images/gifthamper/gifthamper_2.jpg'
     ],
     rating: 5.0,
     reviewsCount: 56,
@@ -644,9 +613,8 @@ export const products: Product[] = [
     shortDescription: 'A treasure box of imported chocolates.',
     description: 'Features Ferrero Rocher, Toblerone, and Lindt Excellence bars in a beautiful gold-themed gift box.',
     images: [
-      'https://images.unsplash.com/photo-1560023608-16447822ce00?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/gifthamper/gifthamper_1.jpg',
+      '/Product Images/Product Images/gifthamper/gifthamper_2.jpg'
     ],
     rating: 4.9,
     reviewsCount: 38,
@@ -661,9 +629,8 @@ export const products: Product[] = [
     shortDescription: 'Everything you need for the celebrations.',
     description: 'A mega-box including premium nuts, exotic dates, assorted chocolates, and a special selection of seeds.',
     images: [
-      'https://images.unsplash.com/photo-1523293836414-f04e712e1f3b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/gifthamper/gifthamper_1.jpg',
+      '/Product Images/Product Images/gifthamper/gifthamper_2.jpg'
     ],
     rating: 5.0,
     reviewsCount: 112,
@@ -679,9 +646,8 @@ export const products: Product[] = [
     shortDescription: 'The ultimate collection for shared joy.',
     description: 'A tiered luxury box filled with over 1.5kg of our finest premium delights. Perfect for gifting to families during festivals.',
     images: [
-      'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/gifthamper/gifthamper_1.jpg',
+      '/Product Images/Product Images/gifthamper/gifthamper_2.jpg'
     ],
     rating: 5.0,
     reviewsCount: 24,
@@ -696,9 +662,8 @@ export const products: Product[] = [
     shortDescription: 'Elegant return gifts for your guests.',
     description: 'Sleek premium cardboard box with gold foil stamping, containing high-quality assorted dry fruits.',
     images: [
-      'https://images.unsplash.com/photo-1626084300762-53d147eaa977?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/gifthamper/gifthamper_1.jpg',
+      '/Product Images/Product Images/gifthamper/gifthamper_2.jpg'
     ],
     rating: 4.8,
     reviewsCount: 145,
@@ -715,9 +680,8 @@ export const products: Product[] = [
     shortDescription: 'Tiny delights for small celebrations.',
     description: 'A cute mini box with 3 Ferrero Rocher and 1 mini Toblerone. Perfect for birthday return gifts.',
     images: [
-      'https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/returngifts/returngitf_1.jpg',
+      '/Product Images/Product Images/returngifts/returngifts_2.jpg'
     ],
     rating: 4.5,
     reviewsCount: 89,
@@ -732,9 +696,8 @@ export const products: Product[] = [
     shortDescription: 'Healthy mini treat bags.',
     description: 'Eco-friendly jute bags containing 100g of our finest roasted almonds and cashews.',
     images: [
-      'https://images.unsplash.com/photo-1615485499978-1279c3d6ac6a?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1547496613-2e22c076579b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/returngifts/returngitf_1.jpg',
+      '/Product Images/Product Images/returngifts/returngifts_2.jpg'
     ],
     rating: 4.7,
     reviewsCount: 156,
@@ -749,9 +712,8 @@ export const products: Product[] = [
     shortDescription: '10ml sample of our Royal Oud.',
     description: 'A premium travel-sized vial of our best-selling fragrances in a velvet pouch.',
     images: [
-      'https://images.unsplash.com/photo-1583467875263-d50dec37a88c?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1000&auto=format&fit=crop'
+      '/Product Images/Product Images/perfumes/perfume_1.webp',
+      '/Product Images/Product Images/perfumes/perfume_2.jpg'
     ],
     rating: 4.6,
     reviewsCount: 42,
@@ -766,9 +728,8 @@ export const products: Product[] = [
     shortDescription: 'Handcrafted potli with assorted dates.',
     description: 'A traditional embroidered potli bag containing 250g of mixed Arabian soft dates.',
     images: [
-      'https://images.unsplash.com/photo-1611082531065-276ad4860ced?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/returngifts/returngitf_1.jpg',
+      '/Product Images/Product Images/returngifts/returngifts_2.jpg'
     ],
     rating: 4.8,
     reviewsCount: 67,
@@ -783,9 +744,8 @@ export const products: Product[] = [
     shortDescription: 'The perfect mix of nuts and sweets.',
     description: 'A dual-compartment box featuring roasted cashews and imported mini truffles.',
     images: [
-      'https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1549462980-6a034d30047b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80'
+      '/Product Images/Product Images/returngifts/returngitf_1.jpg',
+      '/Product Images/Product Images/returngifts/returngifts_2.jpg'
     ],
     rating: 4.9,
     reviewsCount: 34,

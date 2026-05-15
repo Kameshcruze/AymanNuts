@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingCart, Menu, X, Search, Phone, Instagram, MapPin, User } from 'lucide-react';
+import { ShoppingCart, Menu, X, Phone, Instagram, MapPin, User } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
 export default function Header({ onOpenCart }: { onOpenCart: () => void }) {
@@ -11,7 +11,12 @@ export default function Header({ onOpenCart }: { onOpenCart: () => void }) {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+      if (window.scrollY > 100) {
+        setIsMobileMenuOpen(false);
+      }
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -25,8 +30,8 @@ export default function Header({ onOpenCart }: { onOpenCart: () => void }) {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled || location.pathname !== '/' ? 'bg-premium-dark/95 backdrop-blur-lg py-3 shadow-2xl border-b border-gold-500/20' : 'bg-transparent py-6'
+      className={`fixed top-0 left-0 right-0 z-50 ${isMobileMenuOpen ? '' : 'transition-all duration-300'} ${
+        isMobileMenuOpen ? 'bg-black' : (isScrolled || location.pathname !== '/' ? 'bg-premium-dark/95 backdrop-blur-lg py-3 shadow-2xl border-b border-gold-500/20' : 'bg-transparent py-6')
       }`}
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
@@ -39,18 +44,17 @@ export default function Header({ onOpenCart }: { onOpenCart: () => void }) {
         </button>
 
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-2 md:gap-3">
           <img 
-            src="https://images.unsplash.com/photo-1623307567702-8610fe719463?q=80&w=200&auto=format&fit=crop"
+            src="/aymannuts_logo.jpg"
             alt="Ayman Nuts Logo"
-            referrerPolicy="no-referrer"
-            className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-gold-500 shadow-lg shadow-gold-500/20"
+            className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-gold-500 shadow-lg shadow-gold-500/20 object-cover"
           />
-          <div className="hidden sm:block">
-            <h1 className="text-lg md:text-xl font-serif font-bold text-white tracking-wider leading-none uppercase">
+          <div className="flex flex-col">
+            <h1 className="text-sm md:text-xl font-serif font-bold text-white tracking-wider leading-none uppercase">
               AYMAN <span className="text-gold-500">NUTS</span>
             </h1>
-            <p className="text-[10px] text-gold-400 font-sans tracking-[0.2em] uppercase mt-1">Luxury Dry Fruits</p>
+            <p className="text-[8px] md:text-[10px] text-gold-400 font-sans tracking-[0.2em] uppercase mt-0.5 md:mt-1">Luxury Dry Fruits</p>
           </div>
         </Link>
 
@@ -71,9 +75,6 @@ export default function Header({ onOpenCart }: { onOpenCart: () => void }) {
 
         {/* Actions */}
         <div className="flex items-center gap-4 md:gap-6">
-          <button className="hidden md:block p-2 text-white/70 hover:text-gold-400 transition-colors">
-            <Search className="w-5 h-5" />
-          </button>
           <button className="p-2 text-white/70 hover:text-gold-400 transition-colors relative" onClick={onOpenCart}>
             <ShoppingCart className="w-6 h-6" />
             {totalItems > 0 && (
@@ -93,25 +94,25 @@ export default function Header({ onOpenCart }: { onOpenCart: () => void }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[60]"
+              transition={{ duration: 0.1 }}
+              className="fixed inset-0 bg-black z-[60]"
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <motion.div 
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 left-0 bottom-0 w-[85%] max-w-sm bg-premium-dark z-[70] p-8 shadow-2xl border-r border-gold-500/20 flex flex-col"
+              transition={{ type: 'tween', duration: 0.3, ease: 'easeOut' }}
+              className="fixed top-0 left-0 bottom-0 w-[85%] max-w-sm bg-black z-[70] p-8 shadow-2xl border-r border-gold-500/20 flex flex-col"
             >
               <div className="flex justify-between items-center mb-16">
                 <div className="flex items-center gap-3">
                   <img 
-                    src="https://images.unsplash.com/photo-1623307567702-8610fe719463?q=80&w=200&auto=format&fit=crop"
+                    src="/aymannuts_logo.jpg"
                     alt="Logo"
-                    referrerPolicy="no-referrer"
-                    className="w-12 h-12 rounded-full border-2 border-gold-500"
+                    className="w-12 h-12 rounded-full border-2 border-gold-500 object-cover"
                   />
-                  <div className="font-serif">
+                  <div className="font-serif text-white">
                     <p className="font-bold tracking-wider leading-none">AYMAN NUTS</p>
                     <p className="text-[8px] text-gold-500 tracking-[0.2em] font-sans mt-1">EST. 2018</p>
                   </div>

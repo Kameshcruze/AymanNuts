@@ -204,7 +204,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Info Section */}
-      <section className="py-20 bg-black/40 border-y border-white/5">
+      <section className="py-20 bg-black/40 border-y border-white/5 overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, i) => (
@@ -256,9 +256,9 @@ export default function ContactPage() {
       </section>
 
       {/* Form & Map Section */}
-      <section id="contact-form" className="py-24 lg:py-32 relative">
+      <section id="contact-form" className="py-24 lg:py-32 relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-32">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Contact Form */}
             <div className="lg:col-span-7">
               <motion.div
@@ -358,7 +358,7 @@ export default function ContactPage() {
                 className="space-y-12"
               >
                 {/* Store Location */}
-                <div className="p-10 rounded-[40px] bg-white/[0.02] border border-white/5 space-y-8 relative overflow-hidden group">
+                <div className="p-6 md:p-10 rounded-[40px] bg-white/[0.02] border border-white/5 space-y-8 relative overflow-hidden group">
                   <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                     <MapPin className="w-32 h-32 text-gold-500" />
                   </div>
@@ -423,7 +423,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Embed Section */}
-      <section className="py-12">
+      <section className="py-12 overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
            <motion.div 
              initial={{ opacity: 0, y: 30 }}
@@ -445,7 +445,7 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 lg:py-32 bg-black/40 border-y border-white/5">
+      <section className="py-24 lg:py-32 bg-black/40 border-y border-white/5 overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-4xl mx-auto">
             <motion.div 

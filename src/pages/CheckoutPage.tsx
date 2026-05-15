@@ -104,14 +104,15 @@ Please confirm my order. Thank you!`;
   return (
     <div className="min-h-screen pt-20 pb-24 bg-premium-dark">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between mb-12 py-8 border-b border-white/5">
-           <Link to="/shop" className="flex items-center gap-3 text-gold-500 font-black uppercase tracking-[0.2em] text-[10px] group">
-             <div className="w-10 h-10 rounded-full border border-gold-500/20 flex items-center justify-center group-hover:bg-gold-500/10 transition-all">
-               <ChevronLeft className="w-4 h-4" />
+        <div className="relative flex items-center justify-center md:justify-between mb-12 py-8 border-b border-white/5">
+           <Link to="/shop" className="absolute left-0 md:relative flex items-center gap-2 md:gap-3 text-gold-500 font-black uppercase tracking-[0.2em] text-[8px] md:text-[10px] group">
+             <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-gold-500/20 flex items-center justify-center group-hover:bg-gold-500/10 transition-all">
+               <ChevronLeft className="w-3 h-3 md:w-4 md:h-4" />
              </div>
-             Continue Shopping
+             <span className="hidden sm:inline">Continue Shopping</span>
+             <span className="sm:hidden">Back</span>
            </Link>
-           <h1 className="text-3xl md:text-4xl font-serif font-black text-white">Checkout</h1>
+           <h1 className="text-2xl md:text-4xl font-serif font-black text-white text-center">Checkout</h1>
            <div className="hidden md:flex items-center gap-3 text-white/30 text-[10px] uppercase font-black tracking-widest">
              <ShieldCheck className="w-5 h-5 text-gold-500" />
              Secure Checkout

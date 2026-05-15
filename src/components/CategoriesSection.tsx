@@ -5,7 +5,7 @@ import { categories } from '../data';
 
 export default function CategoriesSection() {
   return (
-    <section id="categories" className="py-24 bg-black">
+    <section id="categories" className="py-24 bg-black overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center text-center gap-6 mb-16">
           <div className="space-y-4">
@@ -29,7 +29,7 @@ export default function CategoriesSection() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {categories.map((category, index) => (
             <motion.div
               key={category.id}
@@ -37,7 +37,7 @@ export default function CategoriesSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer"
+              className="group relative h-60 md:h-80 rounded-2xl overflow-hidden cursor-pointer"
             >
               <Link to={`/shop?category=${category.id}`}>
                 <img 
@@ -48,8 +48,8 @@ export default function CategoriesSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                 
-                <div className="absolute bottom-0 left-0 p-8 w-full transform transition-transform duration-500 group-hover:translate-y-[-8px]">
-                  <h3 className="text-2xl font-serif font-bold text-white mb-2 leading-tight">{category.name}</h3>
+                <div className="absolute bottom-0 left-0 p-4 md:p-8 w-full transform transition-transform duration-500 group-hover:translate-y-[-8px]">
+                  <h3 className="text-lg md:text-2xl font-serif font-bold text-white mb-1 md:mb-2 leading-tight">{category.name}</h3>
                   <p className="text-xs text-white/60 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-500 max-w-[200px]">
                     {category.description}
                   </p>

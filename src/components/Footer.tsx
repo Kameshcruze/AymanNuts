@@ -12,10 +12,9 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="flex items-center gap-3">
                <img 
-                src="https://images.unsplash.com/photo-1623307567702-8610fe719463?q=80&w=200&auto=format&fit=crop"
+                src="/aymannuts_logo.jpg"
                 alt="Logo"
-                referrerPolicy="no-referrer"
-                className="w-12 h-12 rounded-full border border-gold-500"
+                className="w-12 h-12 rounded-full border border-gold-500 object-cover"
               />
               <div>
                 <h2 className="text-xl font-serif font-bold tracking-wider">AYMAN <span className="text-gold-500">NUTS</span></h2>

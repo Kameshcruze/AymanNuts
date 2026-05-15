@@ -18,11 +18,13 @@
 
   --color-premium-dark: #0a0a0a;
   --color-premium-card: #151515;
+
+  --breakpoint-xs: 375px;
 }
 
 @layer base {
   body {
-    @apply bg-premium-dark text-white font-sans antialiased selection:bg-gold-500/30 selection:text-gold-200;
+    @apply bg-premium-dark text-white font-sans antialiased selection:bg-gold-500/30 selection:text-gold-200 overflow-x-hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -41,4 +43,29 @@
 @utility gold-text {
   @apply bg-clip-text text-transparent;
   background: linear-gradient(135deg, #cda240 0%, #b8860b 50%, #9c6d09 100%);
+}
+
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    @apply bg-white/5;
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply bg-gold-500/40 rounded-full hover:bg-gold-500/60 transition-colors;
+  }
+}
+
+@utility custom-scrollbar-horizontal {
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    @apply bg-white/5 mx-4 md:mx-8 rounded-full;
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply bg-gold-500/40 rounded-full hover:bg-gold-500/60 transition-colors;
+  }
 }

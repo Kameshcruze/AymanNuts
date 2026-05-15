@@ -59,41 +59,42 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </div>
 
       {/* Info */}
-      <div className="p-6 flex flex-col flex-1">
-        <p className="text-[10px] uppercase tracking-widest text-gold-500 font-bold mb-2">{product.category}</p>
+      <div className="p-3 md:p-6 flex flex-col flex-1">
+        <p className="text-[8px] md:text-[10px] uppercase tracking-widest text-gold-500 font-bold mb-1 md:mb-2">{product.category}</p>
         <Link to={`/product/${product.id}`}>
-          <h3 className="font-serif text-lg font-medium text-white group-hover:text-gold-200 transition-colors mb-2 line-clamp-1">{product.name}</h3>
+          <h3 className="font-serif text-sm md:text-lg font-medium text-white group-hover:text-gold-200 transition-colors mb-1 md:mb-2 line-clamp-1">{product.name}</h3>
         </Link>
         
-        <div className="flex items-center gap-1 mb-4">
+        <div className="flex items-center gap-0.5 md:gap-1 mb-2 md:mb-4">
           {[...Array(5)].map((_, i) => (
-            <Star key={i} className={`w-3 h-3 ${i < Math.floor(product.rating) ? 'text-gold-400 fill-gold-400' : 'text-white/20'}`} />
+            <Star key={i} className={`w-2 h-2 md:w-3 md:h-3 ${i < Math.floor(product.rating) ? 'text-gold-400 fill-gold-400' : 'text-white/20'}`} />
           ))}
-          <span className="text-[10px] text-white/40 ml-1">({product.reviewsCount})</span>
+          <span className="text-[8px] md:text-[10px] text-white/40 ml-1">({product.reviewsCount})</span>
         </div>
 
         <div className="mt-auto">
-          <div className="flex items-center justify-between gap-4 mb-4">
-            <div className="flex items-baseline gap-2">
-              <span className="text-xl font-bold text-white">₹{product.price}</span>
+          <div className="flex items-center justify-between gap-2 md:gap-4 mb-3 md:mb-4">
+            <div className="flex items-baseline gap-1 md:gap-2">
+              <span className="text-base md:text-xl font-bold text-white">₹{product.price}</span>
               {product.originalPrice && (
-                <span className="text-sm text-white/30 line-through font-medium">₹{product.originalPrice}</span>
+                <span className="text-[10px] md:text-sm text-white/30 line-through font-medium">₹{product.originalPrice}</span>
               )}
             </div>
           </div>
           
-          <div className="flex gap-2">
+          <div className="flex gap-1 md:gap-2">
             <button 
               onClick={() => addToCart(product)}
-              className="flex-1 bg-white/5 border border-white/10 text-white py-3 rounded-xl text-[10px] uppercase tracking-widest font-black hover:bg-gold-500 hover:text-black hover:border-gold-500 transition-all"
+              className="flex-1 bg-white/5 border border-white/10 text-white py-2 md:py-3 rounded-lg md:rounded-xl text-[8px] md:text-[10px] uppercase tracking-widest font-black hover:bg-gold-500 hover:text-black hover:border-gold-500 transition-all"
             >
-              Add to Bag
+              <span className="hidden sm:inline">Add to Bag</span>
+              <span className="sm:hidden">Add</span>
             </button>
             <Link 
               to={`/product/${product.id}`}
-              className="px-4 bg-gold-500/10 border border-gold-500/20 text-gold-500 py-3 rounded-xl hover:bg-gold-500/20 transition-all flex items-center justify-center"
+              className="px-2 md:px-4 bg-gold-500/10 border border-gold-500/20 text-gold-500 py-2 md:py-3 rounded-lg md:rounded-xl hover:bg-gold-500/20 transition-all flex items-center justify-center"
             >
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
             </Link>
           </div>
         </div>
